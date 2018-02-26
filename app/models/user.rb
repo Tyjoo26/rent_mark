@@ -1,8 +1,10 @@
 class User < ApplicationRecord
+  belongs_to :unit, optional: true 
 
   enum role: [:renter, :manager]
 
-  belongs_to :unit
+  validates_presence_of :first_name,
+                        :last_name
 
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
