@@ -7,10 +7,12 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:id]) if session[:id]
   end
 
-
-
   def not_found
     raise ActionController::RoutingError.new('Not Found')
   end
-  
+
+  def authenticate!
+    redirect_to login_path unless current_user.registered?
+  end
+
 end
