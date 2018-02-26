@@ -12,6 +12,8 @@
     </div>
   <% else %>
     <div class="contact-us-form">
+      <%= link_to "Sign in with Google", "/auth/google" %>
+      <%= link_to "Don't have Google? Log In Here", login_path %>
       <%= link_to "Contact Us", new_message_path %>
     </div>
   <% end %>
