@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PropertyManager</title>
+    <title>RentMark</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <nav class = "nav-bar-main">
+    <div class="logo-style">
+      <%= link_to image_tag("rent_mark.png"), root_path %>
+    </div>
+  </nav>
   <body>
     <%= yield %>
   </body>
