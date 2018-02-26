@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2018_02_26_153556) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "role", default: 0
   end
 
 end
