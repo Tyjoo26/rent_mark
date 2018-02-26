@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get 'logout',                  to: 'sessions#destroy'
 
   resource :dashboard, only: :show
+  resource :users, only: [:show, :update]
+  get "account/edit", to: "users#edit", as: 'edit_user'
 end
