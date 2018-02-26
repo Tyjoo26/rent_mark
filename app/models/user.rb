@@ -2,6 +2,7 @@ class User < ApplicationRecord
 
   enum role: [:renter, :manager]
 
+  belongs_to :unit
 
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
