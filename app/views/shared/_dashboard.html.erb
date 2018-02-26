@@ -1,5 +1,5 @@
-<% if current_user %>
-  <%= render 'shared/renter_dashboard' %>
-<% else %>
+<% if current_user && current_user.manager? %>
   <%= render 'shared/manager_dashboard' %>
+<% else current_user %>
+  <%= render 'shared/renter_dashboard' %>
 <% end %>
