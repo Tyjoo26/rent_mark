@@ -1,0 +1,5 @@
+<% if current_user %>
+  <%= render "shared/renter_dashboard" %>
+<% else %>
+  <%= render "shared/manager_dashboard" %>
+<% end %>
