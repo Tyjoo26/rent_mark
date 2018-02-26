@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_02_26_173135) do
+ActiveRecord::Schema.define(version: 2018_02_26_200232) do
+
+  create_table "units", force: :cascade do |t|
+    t.string "unit_number"
+    t.string "unit_type"
+    t.string "rent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider"
@@ -24,6 +32,8 @@ ActiveRecord::Schema.define(version: 2018_02_26_173135) do
     t.datetime "updated_at", null: false
     t.integer "role", default: 0
     t.string "email"
+    t.integer "unit_id"
+    t.index ["unit_id"], name: "index_users_on_unit_id"
   end
 
 end
