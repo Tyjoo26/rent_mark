@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_02_26_200232) do
+ActiveRecord::Schema.define(version: 2018_02_26_211229) do
 
   create_table "units", force: :cascade do |t|
     t.string "unit_number"
     t.string "unit_type"
-    t.integer "rent"
+    t.decimal "rent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "rent_due_date"
   end
 
   create_table "users", force: :cascade do |t|
