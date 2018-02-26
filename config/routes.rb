@@ -3,12 +3,14 @@ Rails.application.routes.draw do
 
   get "auth/google/callback",    to: 'sessions#create'
   get 'auth/failure',            to: redirect('/')
+  get '/login',                  to: 'sessions#new'
+  post '/login',                 to: 'sessions#create'
   get 'logout',                  to: 'sessions#destroy'
 
   get 'contact-me', to: 'messages#new', as: 'new_message'
   post 'contact-me', to: 'messages#create', as: 'create_message'
 
   resource :dashboard, only: :show
-  resource :users, only: [:show, :update]
+  resource :users, only: :update
   get "account/edit", to: "users#edit", as: 'edit_user'
 end
