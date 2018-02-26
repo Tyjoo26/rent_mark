@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  enum role: [:renter, :manager]
+
 
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
@@ -15,6 +17,11 @@ class User < ApplicationRecord
     }
 
     user.save!
-    user 
+    user
   end
+
+  def registered?
+    persisted?
+  end
+  
 end
