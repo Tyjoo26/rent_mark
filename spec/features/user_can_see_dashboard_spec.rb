@@ -9,7 +9,7 @@ describe "as a user" do
 
       expect(page).to have_content("Welcome, #{user.first_name}!")
       expect(page).to have_content("Rent: $#{user.unit.rent}")
-      expect(page).to have_content("Rent is due: #{user.unit.rent_due_date}")
+      expect(page).to have_content("Rent is due: #{user.unit.unit_due_date}")
     end
   end
 end

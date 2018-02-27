@@ -10,9 +10,8 @@ describe "as a user" do
       expect(page).to have_content("Edit Account Details")
       click_link("Edit Account Details")
 
-      expect(current_path).to eq(edit_user_path)
+      expect(current_path).to eq(edit_user_path(user.id))
 
-      
     end
   end
 end
