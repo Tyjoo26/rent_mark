@@ -24,5 +24,4 @@ Rails.application.routes.draw do
     resources :units, only: [:edit, :update, :index, :show]
   end
 
-  resource :events, only: [:show, :index]
 end
