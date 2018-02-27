@@ -1,0 +1,17 @@
+<h1 class = "renter-dashboard-head"> Available Events</h1>
+<table style="width:80%" class= "renter-table">
+  <tr>
+    <th>Event Name</th>
+    <th>Event Details</th>
+    <th>Event Date</th>
+    <th>Reserve Spot</th>
+  </tr>
+    <% @events.each do |event| %>
+  <tr>
+    <td><%= event.name %> </td>
+    <td><%= event.details %> </td>
+    <td><%= event.date %></td>
+    <td><%= link_to "RSVP", attend_event_path(event), method: :post %>  </td>
+  </tr>
+  <% end %>
+</table>
