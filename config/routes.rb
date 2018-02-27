@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'contact-me', to: 'messages#new', as: 'new_message'
   post 'contact-me', to: 'messages#create', as: 'create_message'
 
+  resources :charges
+  
   resource :dashboard, only: :show
   resources :events, only: :index do
     post 'attend', on: :member
