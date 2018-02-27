@@ -5,4 +5,8 @@ class Unit < ApplicationRecord
 
   has_many :users
 
+  def unit_due_date
+    rent_due_date >> 1
+  end
+
 end
