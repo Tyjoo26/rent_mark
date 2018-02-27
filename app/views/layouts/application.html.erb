@@ -6,16 +6,23 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   </head>
   <nav class = "nav-bar-main">
     <div class="logo-style">
       <%= link_to image_tag("rent_mark.png"), root_path %>
     </div>
-    <div class="login">
+    <div class="contact-us-header">
+      <%= link_to "Contact Us", new_message_path %>
+    </div>
+    <div class="v-left">
       <%= render 'shared/nav_login' %>
     </div>
   </nav>
   <body>
+    <% flash.each do |name, msg| %>
+      <div class="<%=name%>"><%=raw(msg)%></div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
