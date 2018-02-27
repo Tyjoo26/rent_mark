@@ -1,7 +1,8 @@
 <div class="edit_user_form">
-  <%= form_for :current_user, :url => users_path do |f| %>
-  <%= f.text_field :first_name, placeholder: current_user.first_name %>
-  <%= f.text_field :last_name, placeholder: current_user.last_name %>
+  <%= form_for @user, url: users_path do |f| %>
+  <%= f.text_field :first_name, placeholder: @user.first_name %>
+  <%= f.text_field :last_name, placeholder: @user.last_name %>
+  <%= f.password_field :password, placeholder: "Update Password" %>
   <%= f.email_field :email, placeholder: 'email' %>
   <%= f.submit 'Send' %>
   <% end %>
