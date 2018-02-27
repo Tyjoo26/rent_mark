@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   post 'contact-me', to: 'messages#create', as: 'create_message'
 
   resource :dashboard, only: :show
+  resources :events, only: [:index, :show] do
+    post 'attend', on: :member
+  end
 
   get "account/edit/:id", to: "users#edit", as: 'edit_user'
   resource :users, only: :update
