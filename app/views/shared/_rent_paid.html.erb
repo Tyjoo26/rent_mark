@@ -1,5 +1,5 @@
-<% if current_user.rent_due != 0 %>
- <%= link_to "Pay Rent" %>
+<% if current_user.unit.rent_due != 0 %>
+ <%= link_to "Pay Rent", new_charge_path %>
 <% else %>
-  <%= current_user.rent_due %>
+   Paid
 <% end %>
