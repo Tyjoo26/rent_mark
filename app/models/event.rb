@@ -1,4 +1,9 @@
 class Event < ApplicationRecord
-  validates_presence_of :name, uniqueness: true
-  validates_presence_of :organizer
+  has_many :event_users
+  has_many :users, :through => :event_users
+
+
+  validates_presence_of :name, :details, :date
+
+  
 end

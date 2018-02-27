@@ -1,5 +1,8 @@
 class User < ApplicationRecord
-  belongs_to :unit, optional: true 
+  belongs_to :unit, optional: true
+  has_many :event_users
+  has_many :events, :through => :event_users
+
 
   enum role: [:renter, :manager]
 
