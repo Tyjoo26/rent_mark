@@ -18,6 +18,7 @@
       <td><%= current_user.unit.unit_due_date %></td>
     </tr>
   </table>
-  <p class= "edit-details"><%= link_to "Edit Account Details", edit_user_path(current_user) %></p>
-  <p class = "edit-details "> <%= link_to "View Available Events", events_path %>  </p>
-</div>
+  <div class= "edit-details">
+    <p><%= link_to "Edit Account Details", edit_user_path(current_user) %></p>
+    <p><%= link_to "View Available Events", events_path %></p>
+ </div>
