@@ -4,6 +4,8 @@
     <p>  </p>
   </div>
   <div class="renter-dashboard-table">
+    <p>Unit Number: <%= current_user.unit.unit_number %>  </p>
+    <p>Unit Type: <%= current_user.unit.unit_type %> </p>
     <p>Rent: <%= number_to_currency(current_user.unit.rent) %> </p>
     <p>Rent is due: <%= current_user.unit.unit_due_date %>   </p>
   </div>
