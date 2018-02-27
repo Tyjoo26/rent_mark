@@ -1,13 +1,22 @@
 <div class="renter-dashboard-main">
   <div class="renter-dashboard-head">
-    <p>Welcome, <%= current_user.first_name%>!</p>
-    <p>  </p>
+    <p> Account Management </p>
   </div>
-  <div class="renter-dashboard-table">
-    <p>Unit Number: <%= current_user.unit.unit_number %>  </p>
-    <p>Unit Type: <%= current_user.unit.unit_type %> </p>
-    <p>Rent: <%= number_to_currency(current_user.unit.rent) %> </p>
-    <p>Rent is due: <%= current_user.unit.unit_due_date %>   </p>
-  </div>
-  <p><%= link_to "Edit Account Details", edit_user_path(current_user) %></p>
+  <table style="width:80%" class= "renter-table">
+    <tr>
+      <th>Unit Occupant</th>
+      <th>Unit Number</th>
+      <th>Unit Type</th>
+      <th>Rent</th>
+      <th>Rent Due Date</th>
+    </tr>
+    <tr>
+      <td><%= current_user.first_name %> <%= current_user.last_name %> </td>
+      <td><%= current_user.unit.unit_number %> </td>
+      <td><%= current_user.unit.unit_type %></td>
+      <td><%= number_to_currency(current_user.unit.rent) %></td>
+      <td><%= current_user.unit.unit_due_date %></td>
+    </tr>
+  </table>
+  <p class= "edit-details"><%= link_to "Edit Account Details", edit_user_path(current_user) %></p>
 </div>
