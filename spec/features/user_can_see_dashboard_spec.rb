@@ -7,9 +7,11 @@ describe "as a user" do
       stub_logged_in_user(user)
       visit dashboard_path
 
-      expect(page).to have_content("Welcome, #{user.first_name}!")
-      expect(page).to have_content("Rent: $#{user.unit.rent}")
-      expect(page).to have_content("Rent is due: #{user.unit.unit_due_date}")
+      expect(page).to have_content("Account Management")
+      expect(page).to have_content("$#{user.unit.rent}")
+      expect(page).to have_content("#{user.unit.unit_due_date}")
+      expect(page).to have_content("#{user.unit.unit_number}")
+      expect(page).to have_content("#{user.unit.rent}")    
     end
   end
 end
