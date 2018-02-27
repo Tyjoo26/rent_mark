@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_02_26_223418) do
     t.integer "role", default: 0
     t.string "email"
     t.integer "unit_id"
+    t.string "password_digest"
     t.index ["unit_id"], name: "index_users_on_unit_id"
   end
 
