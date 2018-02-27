@@ -1,0 +1,5 @@
+<% if current_user.rent_due != 0 %>
+ <%= link_to "Pay Rent" %>
+<% else %>
+  <%= current_user.rent_due %>
+<% end %>
