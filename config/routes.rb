@@ -11,6 +11,14 @@ Rails.application.routes.draw do
   post 'contact-me', to: 'messages#create', as: 'create_message'
 
   resource :dashboard, only: :show
+
+  get "account/edit/:id", to: "users#edit", as: 'edit_user'
   resource :users, only: :update
-  get "account/edit", to: "users#edit", as: 'edit_user'
+
+  namespace :manager do
+    resources :users, only: [:edit, :update, :new, :create]
+    resources :events, only: [:new, :create, :edit, :update, :destroy]
+  end
+
+  resource :events, only: [:show, :index]
 end
