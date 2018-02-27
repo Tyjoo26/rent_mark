@@ -9,4 +9,6 @@ class Unit < ApplicationRecord
     rent_due_date >> 1
   end
 
+
+
 end
