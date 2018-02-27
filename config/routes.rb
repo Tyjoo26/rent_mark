@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post 'contact-me', to: 'messages#create', as: 'create_message'
 
   resource :dashboard, only: :show
-  resources :events, only: [:index, :show] do
+  resources :events, only: :index do
     post 'attend', on: :member
   end
 
