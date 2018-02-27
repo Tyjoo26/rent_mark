@@ -1,0 +1,21 @@
+<%= form_tag charges_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+      <span>Rent Due: <%= number_to_currency(current_user.unit.rent) %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="<%= ENV["stripe_key"] %>"
+          data-description="Rent Due"
+          data-amount= "<%= (current_user.unit.rent_due * 100) %> "
+          data-email="<%= current_user.email %>"
+          data-locale="auto">
+  </script>
+<% end %>
