@@ -1,0 +1,25 @@
+$light-grey: #BCC4DB;
+$tan:        #C0A9B0;
+$lavender:   #7880B5;
+$sky-blue:   #6987C9;
+$light-blue: #6BBAEC;
+
+.go-back-button{
+  margin-left:550px;
+  width: 150px;
+  height:50px;
+  border-radius: 30px;
+  background-color:$light-grey;
+}
+
+.manager-unit-index-header{
+  margin-top:20px;
+  font-size: 32px;
+  text-align:center;
+}
+
+.manager-unit-index-table{
+  margin-top:20px;
+  text-align:center;
+  margin-left:75px;
+}
