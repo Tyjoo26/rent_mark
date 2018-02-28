@@ -1,4 +1,5 @@
-class UsersController < ApplicationController
+class Manager::UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :destroy]
 
   def index
     @users = User.where(role: "renter")
@@ -10,6 +11,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    if @user.save
+      flash[:alert] = "You've created a new tenant!"
+      redirect_to manager_users_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -17,11 +24,18 @@ class UsersController < ApplicationController
   end
 
   def update
-
+    if @user.update(user_params)
+      flash[:success] = "You've updated #{@user.first_name}'s profile"
+      redirect_to manager_users_path
+    else
+      render :edit
+    end
   end
 
   def destroy
-
+    @user.destroy
+    flash[:alert] = "User is removed from the system."
+    redirect_to manager_users_path
   end
 
   private
