@@ -2,7 +2,7 @@ class Manager::UnitsController < ApplicationController
   before_action :set_unit, only: [:show, :edit, :update]
 
   def index
-    @units = Unit.all
+    @units = Unit.all.order(:id)
   end
 
   def show
@@ -16,7 +16,7 @@ class Manager::UnitsController < ApplicationController
   def update
     if @unit.update(unit_params)
       flash[:alert] = "You've updated #{@unit.unit_number}'s details!"
-      redirect_to manager_unit_path(@unit)
+      redirect_to manager_units_path
     else
       render :edit
     end
