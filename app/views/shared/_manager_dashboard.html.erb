@@ -1,2 +1,7 @@
 <h1 id= "manager-dashboard-top"> Manager Dashboard </h1>
-<%= link_to "View All Units", manager  %>
+<div class="manager-dashboard-main">
+  <%= link_to "View All Units", manager_units_path  %>
+  <%= link_to "View All Events", manager_events_path %>
+  <%= link_to "View All Tenants", manager_units_path %>
+  <%= link_to "Edit Details", edit_user_path(current_user) %>
+</div>

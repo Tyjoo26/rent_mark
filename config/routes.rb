@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post 'contact-me', to: 'messages#create', as: 'create_message'
 
   resources :charges
-  
+
   resource :dashboard, only: :show
   resources :events, only: :index do
     post 'attend', on: :member
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   namespace :manager do
     resources :users, only: [:edit, :update, :new, :create]
-    resources :events, only: [:new, :create, :edit, :update, :destroy]
+    resources :events, only: [:index, :new, :create, :edit, :update, :destroy]
     resources :units, only: [:edit, :update, :index, :show]
   end
 
