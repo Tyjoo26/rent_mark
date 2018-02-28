@@ -1,12 +1,11 @@
 class EventsController < ApplicationController
-
+  before_action :set_event, only: [:attend, :remove]
   def index
     @events = Event.all
   end
 
 
   def attend
-    @event = Event.find(params[:id])
     if @event.users.include?(current_user) == true
       flash[:alert] = "You've already RSVPed!"
       redirect_to events_path
@@ -15,4 +14,15 @@ class EventsController < ApplicationController
       redirect_to events_path
     end
   end
+
+  def remove
+    @event.users.destroy(User.find(params[:user_id]))
+    redirect_to manager_event_path(@event)
+  end
+
+  private
+
+    def set_event
+      @event = Event.find(params[:id])
+    end
 end
