@@ -1,0 +1,28 @@
+<div class="manager-unit-index-header">
+  Manage All Units
+</div>
+<div class="manager-unit-index-main">
+  <table style="width:80%" class= "manager-unit-index-table">
+    <tr>
+      <th>Unit Number</th>
+      <th>Unit Type</th>
+      <th>Rent Balance</th>
+      <th>Rent Due Date</th>
+      <th>Unit Occupant</th>
+      <th></th>
+    </tr>
+      <% @units.each do |unit| %>
+    <tr>
+      <td><%= unit.unit_number %> </td>
+      <td><%= unit.unit_type %> </td>
+      <td><%= unit.rent_due %></td>
+      <td><%= unit.rent_due_date %> </td>
+      <td><%= unit.user %> </td>
+      <td><%= link_to "Modify Unit", edit_manager_unit_path(unit) %>  </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+<div class="edit-details">
+  <%= button_to "Go Back To Dashboard", dashboard_path, method: :get, class: "go-back-button"%>
+</div>
