@@ -13,11 +13,7 @@
     </tr>
     <tr>
       <td><%= current_user.first_name %> <%= current_user.last_name %> </td>
-      <td><%= current_user.unit.unit_number %> </td>
-      <td><%= current_user.unit.unit_type %></td>
-      <td><%= number_to_currency(current_user.unit.rent) %></td>
-      <td><%= current_user.unit.unit_due_date %></td>
-      <td><%= render 'shared/rent_paid'%></td>
+      <%= render 'shared/no_unit' %>
     </tr>
   </table>
   <div class= "edit-details">
