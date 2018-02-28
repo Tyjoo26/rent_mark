@@ -15,7 +15,7 @@
   </tr>
   <% @event.users.each do |user| %>
   <tr>
-    <th><%= user.first_name %></th>
+    <th><%= user.first_name %> <%= user.last_name %></th>
     <th><%= user.unit.unit_number %></th>
     <th><%= user.email %></th>
     <th><%= button_to "Remove Attendee", remove_event_path(@event), method: :delete, params: {user_id: user.id} %>  </th>
