@@ -1,11 +1,13 @@
 <% if @event.users.nil? %>
+<div class="event-show">
   <%= @event.name %>
   <%= @event.details %>
   <%= @event.date %>
+</div>
 <% else %>
-<%= @event.name %>
-<%= @event.details %>
-<%= @event.date %>
+  <%= @event.name %>
+  <%= @event.details %>
+  <%= @event.date %>
 <table style="width:80%" class= "manager-event-show-table">
   <tr>
     <th>Resident Name</th>
