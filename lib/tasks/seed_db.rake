@@ -1,5 +1,5 @@
 
-namespace
+
   desc 'Create basic role objects'
     task :seed_db  => :environment do
       a = User.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password_digest: "123", unit_id: Unit.find(1).id)
