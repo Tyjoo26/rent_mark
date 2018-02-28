@@ -28,7 +28,7 @@ body, html {
 }
 
 .hero-image{
-  background-image: image-url(aussie.jpg);
+  background-image: image-url("aussie.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
