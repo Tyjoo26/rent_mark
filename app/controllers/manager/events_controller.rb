@@ -10,11 +10,17 @@ class Manager::EventsController < ApplicationController
   end
 
   def new
-
+    @event = Event.new
   end
 
   def create
-
+    @event = Event.new(event_params)
+    if @event.save
+      flash[:success] = "#{@event.name} has been scheduled!"
+      redirect_to manager_events_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -22,11 +28,19 @@ class Manager::EventsController < ApplicationController
   end
 
   def update
-
+    @event = Event.update(event_params)
+    if @event.save
+      flash[:success] = "#{@event.name} details have been modified!"
+      redirect_to manager_event_path(@event)
+    else
+      render :edit
+    end
   end
 
   def destroy
-
+    @event.destroy
+    flash[:delete] = "Event has been removed from dashboard"
+    redirect_to manager_events_path
   end
 
   private
