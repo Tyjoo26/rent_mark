@@ -1,0 +1,25 @@
+<% if @event.users.nil? %>
+  <%= @event.name %>
+  <%= @event.details %>
+  <%= @event.date %>
+<% else %>
+<%= @event.name %>
+<%= @event.details %>
+<%= @event.date %>
+<table style="width:80%" class= "manager-event-show-table">
+  <tr>
+    <th>Resident Name</th>
+    <th>Resident Unit</th>
+    <th>Resident Email</th>
+    <th></th>
+  </tr>
+  <% @event.users.each do |user| %>
+  <tr>
+    <th><%= user.first_name %></th>
+    <th><%= user.unit.unit_number %></th>
+    <th><%= user.email %></th>
+    <th><%= button_to "Remove Attendee", remove_event_path(@event), method: :delete, params: {user_id: user.id} %>  </th>
+  </tr>
+  <% end %>
+</table>
+<% end %>

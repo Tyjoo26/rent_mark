@@ -1,0 +1,27 @@
+<div class="manager-event-index-header">
+  Manage Property Events
+</div>
+<div class="manager-event-index-main">
+  <table style="width:80%" class= "manager-event-index-table">
+    <tr>
+      <th> Event Page</th>
+      <th>Event Details</th>
+      <th>Event Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+      <% @events.each do |event| %>
+    <tr>
+      <td><%= button_to event.name, manager_event_path(event), method: :get %> </td>
+      <td><%= event.details %> </td>
+      <td><%= event.date %></td>
+      <td><%= button_to "Change Details", edit_manager_event_path(event), method: :get %>  </td>
+      <td><%= button_to "Delete Event", edit_manager_event_path(event), method: :get %> </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+  <div class="edit-details">
+  <%= button_to "Create New Resident Event!", new_manager_event_path, method: :get, class: "new-event-button"%>
+  <%= button_to "Go Back To Dashboard", dashboard_path, method: :get, class: "go-back-button"%>
+  </div>
