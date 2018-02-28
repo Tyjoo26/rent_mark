@@ -1,0 +1,6 @@
+<%= form_for [:manager, @event] do |f| %>
+<%= f.text_field :name, placeholder: "#{@event.name}" %>
+<%= f.text_area  :details, placeholder: "#{@event.details}" %>
+<%= f.date_select :date %>
+<%= f.submit "Edit Event Details" %>
+<% end %>
