@@ -16,7 +16,7 @@
       <td><%= event.details %> </td>
       <td><%= event.date %></td>
       <td><%= button_to "Change Details", edit_manager_event_path(event), method: :get %>  </td>
-      <td><%= button_to "Delete Event", edit_manager_event_path(event), method: :get %> </td>
+      <td><%= button_to "Delete Event", manager_event_path(event), method: :delete %> </td>
     </tr>
     <% end %>
   </table>
