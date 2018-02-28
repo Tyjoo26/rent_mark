@@ -1,5 +1,5 @@
 class Manager::EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show,:edit, :update, :destroy]
 
   def index
     @events = Event.all.order(:id)
@@ -28,7 +28,7 @@ class Manager::EventsController < ApplicationController
   end
 
   def update
-    @event = Event.update(event_params)
+    @event.update(event_params)
     if @event.save
       flash[:success] = "#{@event.name} details have been modified!"
       redirect_to manager_event_path(@event)
