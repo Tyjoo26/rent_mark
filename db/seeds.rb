@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Event.create(name: "Breakfast2Go", details: "Breakfast in the Lobby", total_available: 25)
-Event.create(name: "Pool Party", details: "Enjoy Drinks and Food at the Pool", total_available: 15)
-Event.create(name: "Wine and Cheese", details: "Enjoy Wine and Cheese at our Mixer", total_available: 20)
-Event.create(name: "Meet your Neighbors!", details: "Meet your neighbors!", total_available: 12)
-Event.create(name: "Movie Night!", details: "Watch Cheech and Chong!", total_available: 25)
-Event.create(name: "Quarterly Social", details: "Take a break at our Quarterly Social", total_available: 22)
+Event.create(name: "Breakfast2Go", details: "Breakfast in the Lobby", date: Faker::Date.forward(30))
+Event.create(name: "Pool Party", details: "Enjoy Drinks and Food at the Pool", date: Faker::Date.forward(60))
+Event.create(name: "Wine and Cheese", details: "Enjoy Wine and Cheese at our Mixer", date: Faker::Date.forward(75))
+Event.create(name: "Meet your Neighbors!", details: "Meet your neighbors!", date: Faker::Date.forward(80))
+Event.create(name: "Movie Night!", details: "Watch Cheech and Chong!", date: Faker::Date.forward(14))
+Event.create(name: "Quarterly Social", details: "Take a break at our Quarterly Social", date: Faker::Date.forward(27))
 
 Unit.create(unit_number: "A1", unit_type: "1Bdr", rent: 975.25, rent_due_date: Date.current, rent_due: 975.25)
 Unit.create(unit_number: "A2", unit_type: "1Bdr", rent: 975.25, rent_due_date: Date.current, rent_due: 975.25)
@@ -90,5 +90,5 @@ aa = User.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_na
 aa.save
 
 
-cc = User.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password_digest: "123")
-cc.save
+bat = User.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password_digest: "123")
+bat.save
