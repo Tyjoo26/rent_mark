@@ -1,0 +1,9 @@
+<%= form_for [:manager, @unit] do |f| %>
+<%= f.label "Edit Total Rent" %>
+<%= f.text_field :rent, placeholder: @unit.rent %>
+<%= f.label "Edit Unpaid Rent" %>
+<%= f.text_field :rent_due, placeholder: @unit.rent_due %>
+<%= f.label "Edit Rent Due Date" %>
+<%= f.date_select :rent_due_date %>
+<%= f.submit 'Send' %>
+<% end %>
