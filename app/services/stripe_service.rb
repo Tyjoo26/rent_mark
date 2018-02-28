@@ -8,11 +8,11 @@ class StripeService
     )
   end
 
-  def self.initiate_charge(id, amount)
+  def self.initiate_charge(id, amount, unit)
     Stripe::Charge.create(
       :customer => id,
       :amount => amount,
-      :description => "#{current_user.unit.unit_number} Rent Payment",
+      :description => "#{unit} Rent Payment",
       :currency => 'usd'
     )
   end
