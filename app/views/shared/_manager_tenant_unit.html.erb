@@ -1,0 +1,21 @@
+<tr>
+<% @users.each do |user| %>
+  <% if user.unit == nil %>
+    <td><%= user.first_name %> <%= user.last_name %></td>
+    <td><%= user.email %> </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  <% else %>
+    <td><%= user.first_name %> <%= user.last_name %></td>
+    <td><%= user.email %> </td>
+    <td><%= user.unit.unit_number %></td>
+    <td><%= user.unit.rent_due_date %> </td>
+    <td><%= render 'shared/status' %> </td>
+    <td><%= button_to "Edit User Info", edit_manager_user_path(user), method: :get %>  </td>
+    <td><%= button_to "Remove Tenant", edit_manager_user_path(user), method: :delete %>  </td>
+  <% end %>
+</tr>
+<% end %>

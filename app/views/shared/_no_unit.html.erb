@@ -1,0 +1,13 @@
+<% if current_user.unit == nil %>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+<% else %>
+  <td><%= current_user.unit.unit_number %> </td>
+  <td><%= current_user.unit.unit_type %></td>
+  <td><%= number_to_currency(current_user.unit.rent) %></td>
+  <td><%= current_user.unit.unit_due_date %></td>
+  <td><%= render 'shared/rent_paid'%></td>
+<% end %>
