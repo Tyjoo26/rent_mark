@@ -1,5 +1,5 @@
 <div class="rent-paid">
-  <h2>Thanks! You've successfully paid your monthly rent for <%= current_user.unit.unit_number %>! Your monthly balance is <%= current_user.unit.rent_due %>  <strong> </h2>
+  <h2>Thanks! You've successfully paid your monthly rent for Unit:<%= current_user.unit.unit_number %>! Your monthly balance is <%= current_user.unit.rent_due %>  <strong> </h2>
 </div>
 <div class="edit-details">
   <%= link_to "Go Back to Dashboard", dashboard_path %>
