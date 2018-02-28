@@ -1,49 +1,11 @@
-.nav-bar-main{
-  display:flex;
-  flex-flow:row;
-  flex-direction: row;
-  border-bottom: 3px;
-  border-top:0px;
-  border-left:0px;
-  border-right:0px;
-  border-color: grey;
-  border-style: double ;
-}
-
-.logo-style{
-  height: 100px;
-  width: 150px;
-}
-
-.v-left{
-  margin-top: 55px;
-  border-left:2px solid grey;
-  height: 30px;
-  margin-left: 20px;
-  font-size:20px;
-  padding-left:20px;
-}
+$light-grey: #BCC4DB;
+$tan:        #C0A9B0;
+$lavender:   #7880B5;
+$sky-blue:   #6987C9;
+$light-blue: #6BBAEC;
 
 
-.contact-us-header{
-  font-size: 20px;
-  margin-top: 55px;
-  margin-left:850px;
-}
 
-.renter-dashboard-main{
-  font-size: 20px;
-}
-
-.renter-dashboard-head{
-  text-align:center;
-  font-size: 32px;
-}
-
-.renter-table{
-  text-align:center;
-  margin-left: 125px;
-}
 
 .edit-details{
   text-align:center;
