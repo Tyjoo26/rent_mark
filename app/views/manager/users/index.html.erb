@@ -1,0 +1,21 @@
+<div class="manager-user-index-header">
+  Tenant dashboard
+</div>
+<div class="manager-user-index-main">
+  <table style="width:80%" class= "manager-user-index-table">
+    <tr>
+      <th>Tenant Name</th>
+      <th>Email</th>
+      <th>Unit Number</th>
+      <th>Rent Due</th>
+      <th>Rent Status</th>
+      <th></th>
+      <th></th>
+    </tr>
+      <%= render 'shared/manager_tenant_unit' %>
+  </table>
+</div>
+<div class="edit-details">
+  <%= button_to "Create New tenant", new_manager_user_path, method: :get, class: "new-user-button"%>
+  <%= button_to "Go Back To Dashboard", dashboard_path, method: :get, class: "go-back-button"%>
+</div>

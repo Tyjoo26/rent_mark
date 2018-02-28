@@ -1,0 +1,6 @@
+<%= form_for [:manager, @user] do |f| %>
+<%= f.text_field :first_name, placeholder: "#{@user.first_name}" %>
+<%= f.text_field :last_name, placeholder: "#{@user.last_name}" %>
+<%= f.text_field :email, placeholder: "#{@user.email}" %>
+<%= f.submit "Edit Details" %>
+<% end %>
