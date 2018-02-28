@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   namespace :manager do
     resources :units, only: [:edit, :update, :index, :show]
-    resources :users, only: [:edit, :update, :new, :create]
+    resources :users, only: [:index, :edit, :update, :new, :create]
     resources :events, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   end
 
