@@ -1,13 +1,15 @@
 class User < ApplicationRecord
+  validates_presence_of :first_name,
+  :last_name
+
+  has_secure_password
+
+  enum role: [:renter, :manager]
+
   belongs_to :unit, optional: true
   has_many :event_users
   has_many :events, :through => :event_users
 
-
-  enum role: [:renter, :manager]
-
-  validates_presence_of :first_name,
-                        :last_name
 
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
