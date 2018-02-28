@@ -14,14 +14,15 @@ Rails.application.routes.draw do
   namespace :manager do
     resources :units, only: [:edit, :update, :index, :show]
     resources :users, only: [:edit, :update, :new, :create]
-    resources :events, only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :events, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   end
-  
+
   resources :charges
 
   resource :dashboard, only: :show
   resources :events, only: :index do
     post 'attend', on: :member
+    delete 'remove', on: :member
   end
 
   get "account/edit/:id", to: "users#edit", as: 'edit_user'
