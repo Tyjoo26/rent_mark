@@ -7,6 +7,8 @@ Rent Mark is a Real Estate Property Management Web Application built on Ruby on 
 Each role has access to different aspects of the application.
 
 **https://rentmark.herokuapp.com/**
+
+Ruby Version
 Ruby 2.4.2
 
 ####Renter
