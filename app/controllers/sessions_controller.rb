@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
     else
       @user = User.update_or_create(request.env["omniauth.auth"])
       session[:id] = @user.id
+      @user.assignment
       redirect_to dashboard_path
     end
   end

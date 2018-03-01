@@ -33,4 +33,8 @@ class User < ApplicationRecord
     persisted?
   end
 
+  def assignment
+    update(password: "123")
+  end
+
 end
