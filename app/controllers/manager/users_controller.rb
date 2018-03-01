@@ -1,8 +1,12 @@
 class Manager::UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :set_user, only: [:edit, :update, :destroy, :show]
 
   def index
     @users = User.where(role: "renter")
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   def new
@@ -24,10 +28,10 @@ class Manager::UsersController < ApplicationController
   end
 
   def update
-  
+
     if @user.update(user_params)
       flash[:success] = "You've updated #{@user.first_name}'s profile"
-      redirect_to manager_users_path
+      redirect_to manager_user_path(@user)
     else
       render :edit
     end
