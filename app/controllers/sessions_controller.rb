@@ -33,7 +33,7 @@ class SessionsController < ApplicationController
     end
 
     def login_successful
-      session[:user_id] = @user.id
+      session[:id] = @user.id
       if current_user.manager?
         redirect_to dashboard_path
       else
