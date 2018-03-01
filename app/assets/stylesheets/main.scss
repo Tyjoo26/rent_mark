@@ -1,11 +1,39 @@
 $light-grey: #BCC4DB;
 $tan:        #C0A9B0;
-$lavender:   #7880B5;
+$lavender:   #C0B9DD;
 $sky-blue:   #6987C9;
 $light-blue: #6BBAEC;
 
+.center-flash{
+  text-align:center;
+}
+
+.user-login{
+  display:flex;
+  flex-direction: column;
+  margin-left:500px;
+}
+
+.user-login-form{
+  margin-left:540px;
+}
+
+.login-button{
+  width: 120px;
+  height:45px;
+  font-size:14px;
+  border-radius: 10px;
+  margin-left: 545px;
+  margin-top:5px;
+  background-color:$lavender;
+}
 
 
+
+.contact-body{
+  display:flex;
+  justify-content: center;
+}
 
 .edit-details{
   text-align:center;

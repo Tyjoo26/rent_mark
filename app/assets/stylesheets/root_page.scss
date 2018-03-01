@@ -1,6 +1,6 @@
 $light-grey: #BCC4DB;
-$tan:        #C0A9B0;
-$lavender:   #7880B5;
+$tan:        #F7F4EA;
+$lavender:   #C0B9DD;
 $sky-blue:   #6987C9;
 $light-blue: #6BBAEC;
 $nav-bar:    #E8F0FF;
@@ -11,6 +11,7 @@ body, html {
   width: 100%;
   border:1px;
   border-radius: 25px;
+  background-color:$tan;
 }
 
 .nav-bar-main{
@@ -24,7 +25,7 @@ body, html {
   border-color: grey;
   border-style: double;
   border-radius:10px;
-  background-color: white;
+  background-color: $tan;
 }
 
 .hero-image{
@@ -40,7 +41,7 @@ body, html {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -66,4 +67,39 @@ body, html {
   font-size: 20px;
   margin-top: 50px;
   margin-left:850px;
+}
+
+.welcome-content{
+  text-align:center;
+  background-color:$tan;
+  height:25%;
+  width: 50%;
+  margin-left: 300px;
+  font-size: 18px;
+}
+
+.sign-in{
+  width: 150px;
+  height:50px;
+  font-size:14px;
+  border-radius: 20px;
+  margin-left: 200px;
+  background-color:$light-blue;
+}
+
+.welcome{
+  font-style: italic;
+}
+.sign-in-no-google{
+  width: 250px;
+  height:50px;
+  font-size:14px;
+  border-radius: 20px;
+  margin-left: 150px;
+  margin-top:5px;
+  background-color:$lavender;
+}
+
+#welcome-access-account{
+  display:flex;
 }
