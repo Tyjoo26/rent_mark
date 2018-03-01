@@ -1,20 +1,22 @@
 <div class="hero-image">
   <div class="hero-text">
-    <h1> RESIDENTS </h1>
-    <p> Your Exclusive Experience, By You</p>
+    <h1> Resident Portal </h1>
   </div>
 </div>
-<div>With our convenient Resident Portal, we've made it easy and convenient for you to pay your rent and submit service requests online. Log in, tell us what you need, and we'll get it done!</div>
+<div class = "welcome-content">
+  <p class= "welcome">With our convenient Resident Portal, we've made it easy and convenient for you to pay your rent and submit service requests online.</p>
+  <p class = "welcome">Log in, tell us what you need, and we'll get it done!</p>
 
-<div id="welcome-access-account">
-  <% if current_user.nil?%>
+  <div id="welcome-access-account">
+    <% if current_user.nil?%>
     <div class="account-button">
-      <%= link_to "Sign in with Google", "/auth/google" %>
-      <%= link_to "Don't have Google? Log In Here", login_path %>
+      <%= button_to "Sign in with Google", "/auth/google", method: :get, class: 'sign-in' %>
+      <%= button_to "Don't have Google? Log In Here", login_path, method: :get, class: 'sign-in-no-google'%>
     </div>
-  <% else %>
+    <% else %>
     <div class='account-button'>
       <%= link_to "Access Account", dashboard_path %>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
