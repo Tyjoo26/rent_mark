@@ -1,0 +1,127 @@
+$light-grey: #BCC4DB;
+$tan:        #F7F4EA;
+$lavender:   #C0B9DD;
+$sky-blue:   #6987C9;
+$light-blue: #6BBAEC;
+$nav-bar:    #E8F0FF;
+
+
+
+.login-button{
+  width: 120px;
+  height:45px;
+  font-size:14px;
+  border-radius: 10px;
+  margin-left: 545px;
+  margin-top:5px;
+  background-color:$lavender;
+}
+
+.sign-in{
+  width: 150px;
+  height:50px;
+  font-size:14px;
+  border-radius: 20px;
+  margin-left: 250px;
+  background-color:$light-blue;
+}
+
+.sign-in-no-google{
+  width: 250px;
+  height:50px;
+  font-size:14px;
+  border-radius: 20px;
+  margin-left: 200px;
+  margin-top:5px;
+  background-color:$lavender;
+}
+
+.account-button-access{
+  width: 250px;
+  height:50px;
+  font-size:14px;
+  border-radius: 20px;
+  margin-left: 200px;
+  margin-top:5px;
+  background-color:$light-blue;
+}
+
+.go-back-button{
+  margin-left:550px;
+  width: 150px;
+  height:50px;
+  border-radius: 20px;
+  background-color:$light-grey;
+}
+
+
+
+.go-back-button-show{
+  width: 250px;
+  height:50px;
+  font-size:14px;
+  border-radius: 20px;
+  margin-left: 515px;
+  margin-top:5px;
+  background-color:$light-grey;
+}
+
+.remove-attendee-button{
+  width: 125px;
+  height:40px;
+  border-radius: 20px;
+  background-color: $light-blue;
+}
+
+.show-event-button{
+  width: 135px;
+  height:40px;
+  border-radius: 20px;
+  background-color: $lavender;
+  margin-left:15px;
+}
+
+
+.edit-event-button{
+  width: 105px;
+  height:40px;
+  border-radius: 20px;
+  background-color: $sky-blue;
+  margin-left:27px;
+}
+
+
+.delete-event-button{
+  width: 125px;
+  height:40px;
+  border-radius: 20px;
+  margin-left:20px;
+  background-color: $light-blue;
+}
+
+.new-event-button{
+  width: 250px;
+  height:50px;
+  font-size:14px;
+  border-radius: 20px;
+  margin-left:500px;
+  margin-top:5px;
+  margin-bottom:5px;
+  background-color:$light-grey;
+}
+
+.delete-unit-button{
+  width: 125px;
+  height:40px;
+  border-radius: 20px;
+  margin-left:10px;
+  background-color: $light-blue;
+}
+
+.edit-unit-button{
+  width: 125px;
+  height:40px;
+  border-radius: 20px;
+  margin-left:10px;
+  background-color: $sky-blue;
+}

@@ -6,16 +6,16 @@
     <td></td>
     <td></td>
     <td></td>
-    <td><%= button_to "Edit User Info", edit_manager_user_path(user), method: :get %>  </td>
-    <td><%= button_to "Remove Tenant", manager_user_path(user), method: :delete %>  </td>
+    <td><%= button_to "Edit User Info", edit_manager_user_path(user), method: :get, class: "edit-unit-button" %>  </td>
+    <td><%= button_to "Remove Tenant", manager_user_path(user), method: :delete, class: "delete-unit-button" %>  </td>
   <% else %>
     <td><%= user.first_name %> <%= user.last_name %></td>
     <td><%= user.email %> </td>
     <td><%= user.unit.unit_number %></td>
     <td><%= user.unit.rent_due_date %> </td>
     <td><%= user.unit.paid? %> </td>
-    <td><%= button_to "Edit User Info", edit_manager_user_path(user), method: :get %>  </td>
-    <td><%= button_to "Remove Tenant", manager_user_path(user), method: :delete %>  </td>
+    <td><%= button_to "Edit User Info", edit_manager_user_path(user), method: :get, class: "edit-unit-button" %>  </td>
+    <td><%= button_to "Remove Tenant", manager_user_path(user), method: :delete, class: "delete-unit-button" %>  </td>
   <% end %>
 </tr>
 <% end %>

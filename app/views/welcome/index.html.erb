@@ -14,8 +14,8 @@
       <%= button_to "Don't have Google? Log In Here", login_path, method: :get, class: 'sign-in-no-google'%>
     </div>
     <% else %>
-    <div class='account-button'>
-      <%= link_to "Access Account", dashboard_path %>
+    <div >
+      <%= button_to "Access Account", dashboard_path, method: :get, class: 'account-button-access' %>
     </div>
     <% end %>
   </div>

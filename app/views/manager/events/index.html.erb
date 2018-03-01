@@ -12,11 +12,11 @@
     </tr>
       <% @events.each do |event| %>
     <tr>
-      <td><%= button_to event.name, manager_event_path(event), method: :get %> </td>
+      <td><%= button_to event.name, manager_event_path(event), method: :get, class: 'show-event-button' %> </td>
       <td><%= event.details %> </td>
       <td><%= event.date %></td>
-      <td><%= button_to "Change Details", edit_manager_event_path(event), method: :get %>  </td>
-      <td><%= button_to "Delete Event", manager_event_path(event), method: :delete %> </td>
+      <td><%= button_to "Change Details", edit_manager_event_path(event), method: :get, class: 'edit-event-button' %>  </td>
+      <td><%= button_to "Delete Event", manager_event_path(event), method: :delete, class: 'delete-event-button' %> </td>
     </tr>
     <% end %>
   </table>

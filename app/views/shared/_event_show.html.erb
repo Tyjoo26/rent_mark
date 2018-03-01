@@ -1,13 +1,13 @@
 <% if @event.users.nil? %>
 <div class="event-show">
-  <%= @event.name %>
-  <%= @event.details %>
-  <%= @event.date %>
+  Name:<%= @event.name %>
+  Details:<%= @event.details %>
+  Date:<%= @event.date %>
 </div>
 <% else %>
-  <%= @event.name %>
-  <%= @event.details %>
-  <%= @event.date %>
+  Name: <%= @event.name %><br>
+  Details:  <%= @event.details %><br>
+  Date: <%= @event.date %>
 <table style="width:80%" class= "manager-event-show-table">
   <tr>
     <th>Resident Name</th>
@@ -20,12 +20,12 @@
     <th><%= user.first_name %> <%= user.last_name %></th>
     <th><%= user.unit.unit_number %></th>
     <th><%= user.email %></th>
-    <th><%= button_to "Remove Attendee", remove_event_path(@event), method: :delete, params: {user_id: user.id} %>  </th>
+    <th><%= button_to "Remove Attendee", remove_event_path(@event), method: :delete, params: {user_id: user.id}, class: "remove-attendee-button"%>  </th>
   </tr>
   <% end %>
 </table>
 <% end %>
 
 <div class="edit-details">
-  <%= button_to "Manager Events Dashboard", manager_events_path, method: :get, class: "go-back-button"%>
+  <%= button_to "Manager Events Dashboard", manager_events_path, method: :get, class: "go-back-button-show"%>
 </div>
