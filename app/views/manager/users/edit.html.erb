@@ -1,6 +1,9 @@
 <%= form_for [:manager, @user] do |f| %>
 <%= f.text_field :first_name, placeholder: "#{@user.first_name}" %>
 <%= f.text_field :last_name, placeholder: "#{@user.last_name}" %>
+<%= f.password_field :password, placeholder: "Edit Password" %>
 <%= f.text_field :email, placeholder: "#{@user.email}" %>
+<%= f.label "Associate #{@user.first_name} with Unit" %>
+<%= f.collection_select :unit, Unit.where(user: nil), :id, :unit_number, :prompt => true %>
 <%= f.submit "Edit Details" %>
 <% end %>
