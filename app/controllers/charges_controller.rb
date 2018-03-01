@@ -6,6 +6,7 @@ class ChargesController < ApplicationController
 
   def create
     @amount = (current_user.unit.rent_due * 100).round
+    Stripe.api_key = ENV["stripe_secret"]
     customer = StripeService.initiate_customer(params[:stripeEmail], params[:stripeToken])
     begin
       StripeService.initiate_charge(customer, @amount, current_user.unit.unit_number)
