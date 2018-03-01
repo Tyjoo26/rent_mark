@@ -16,4 +16,10 @@ class Unit < ApplicationRecord
       rent_due
     end
   end
+
+  def user?
+    if user == nil
+      ""
+    end
+  end
 end

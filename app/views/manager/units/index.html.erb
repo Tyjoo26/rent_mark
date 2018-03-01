@@ -17,7 +17,7 @@
       <td><%= unit.unit_type %> </td>
       <td><%= unit.rent_due %></td>
       <td><%= unit.rent_due_date %> </td>
-      <td><%= unit.user.first_name %> <%= unit.user.last_name %></td>
+      <td><%= unit.user? || unit.user.first_name %> <%= unit.user? || unit.user.last_name %></td>
       <td><%= link_to "Modify Unit", edit_manager_unit_path(unit) %>  </td>
     </tr>
     <% end %>
