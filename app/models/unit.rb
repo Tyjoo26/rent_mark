@@ -9,6 +9,11 @@ class Unit < ApplicationRecord
     rent_due_date >> 1
   end
 
-
-
+  def paid?
+    if rent_due == 0
+      "Rent Paid"
+    else
+      rent_due
+    end
+  end
 end
