@@ -26,6 +26,6 @@ Rails.application.routes.draw do
   end
 
   get "account/edit/:id", to: "users#edit", as: 'edit_user'
-  resource :users, only: :update
+  resource :user, only: :update
 
 end
